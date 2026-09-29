@@ -1,0 +1,48 @@
+name: Evaluar Taller 01
+
+# ¿Cuándo se ejecuta este workflow?
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Permite ejecutarlo manualmente desde la pestaña Actions
+
+# ¿Qué trabajo debe hacer?
+jobs:
+  evaluacion-automatica:
+    name: Evaluación automática con pytest
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Copiar el código del repositorio
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      # Paso 2: Instalar Python
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Paso 3: Instalar pytest
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      # Paso 4: Ejecutar las pruebas
+      - name: Ejecutar pruebas automáticas del Taller 01
+        working-directory: ./taller-01
+        run: pytest test_programa.py -v --tb=short
+
+      # Paso 5: Resumen del resultado
+      - name: Mostrar resumen
+        if: always()
+        run: |
+          echo "=========================================="
+          echo "EVALUACIÓN AUTOMÁTICA DEL TALLER 01"
+          echo "=========================================="
+          echo "Revisa los resultados arriba."
+          echo "Si todas las pruebas pasan, ¡felicitaciones!"
+          echo "=========================================="
