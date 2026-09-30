@@ -18,17 +18,17 @@ PISTA: Hay 3 errores en este código.
 def main():
     # --- ENTRADAS ---
     voltaje = float(input("Digite el voltaje medido: "))
-    temperatura = float(input("Digite la temperatura: "))
+
     
     # --- PROCESO Y SALIDAS ---
-    if voltaje < 220:
+    if voltaje>220:
         print("¡Peligro! Voltaje excesivo")
     else:
         print("Voltaje dentro del rango")
-        print("Todo está bien")
+        
     
-    print(f"La temperatura es {temperatura}")
+5
 
 
 if __name__ == "__main__":
-    main()edir temperatura: {salida}"
+    main()

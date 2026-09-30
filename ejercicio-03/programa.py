@@ -17,11 +17,11 @@ def main():
     voltaje = float(input("Digite el voltaje medido: "))
     
     # --- PROCESO Y SALIDAS ---
-    if voltaje ___ 220:
+    if voltaje > 220:
         print("¡Peligro! Voltaje excesivo")
-    ___ voltaje >= 110:
-        print("___")
-    ___:
+    elif voltaje >= 110:
+        print("voltaje dentro del rango")
+    else:
         print("Voltaje insuficiente")
 
 

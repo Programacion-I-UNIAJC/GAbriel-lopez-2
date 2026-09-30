@@ -15,12 +15,12 @@ Cuando termines, ejecuta las pruebas:
 def main():
     # --- ENTRADAS ---
     # Pista: el voltaje es un número real (puede tener decimales)
-    voltaje = ___(input("Digite el voltaje medido: "))
-    
+    voltaje = float(input())
+
     # --- PROCESO Y SALIDAS ---
     # Pista: compara si el voltaje es MAYOR que 220
-    if voltaje ___ 220:
-        print("___")
+    if voltaje > 220:
+        print("Peligro")
 
 
 if __name__ == "__main__":

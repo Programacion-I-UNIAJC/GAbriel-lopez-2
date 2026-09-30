@@ -19,21 +19,21 @@ def main():
     # --- ENTRADAS ---
     tipo_circuito = input("Digite el tipo de circuito (C/A): ")
     voltaje = float(input("Digite el voltaje medido: "))
-    resistencia = float(input("Digite la resistencia: "))
+    
     
     # --- PROCESO Y SALIDAS ---
     if tipo_circuito == "C":
-        if voltaje > 220:
+        if voltaje > 24:
             print("Peligro en CC")
         else:
             print("Voltaje CC seguro")
     else:
-        if voltaje > 24:
+        if voltaje > 220:
             print("Peligro en CA")
         else:
             print("Voltaje CA seguro")
     
-    print(f"La resistencia es {resistencia}")
+    
 
 
 if __name__ == "__main__":

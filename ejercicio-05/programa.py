@@ -14,15 +14,15 @@ Cuando termines, ejecuta las pruebas:
 
 def main():
     # --- ENTRADAS ---
-    num_mediciones = ___(input("Digite el número de mediciones: "))
+    num_mediciones =int(input("Digite el número de mediciones: "))
     
     # --- PROCESO ---
-    suma = ___
-    for i in range(___):
+    suma =0
+    for i in range(num_mediciones):
         valor = float(input(f"Digite la medición {i+1}: "))
-        suma ___ valor
+        suma+=valor
     
-    promedio = suma ___ num_mediciones
+    promedio = suma/num_mediciones
     
     # --- SALIDAS ---
     print(f"El promedio de las mediciones es: {promedio:.2f}")
